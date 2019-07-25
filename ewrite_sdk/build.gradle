@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.DreamXLong'
 
 android {
@@ -35,5 +34,4 @@ dependencies {
     api 'org.greenrobot:eventbus:3.0.0'
     implementation 'com.google.code.gson:gson:2.8.1'
     api files('libs/AndroidBleApi_V1.1.4.jar')
-
 }
