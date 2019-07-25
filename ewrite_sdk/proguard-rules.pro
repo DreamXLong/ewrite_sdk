@@ -19,3 +19,23 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+-keepattributes *Annotation*
+-keepclassmembers class ** {
+    @de.greenrobot.event.Subscribe <methods>;
+}
+-keep enum de.greenrobot.event.ThreadMode { *; }
+# Only required if you use AsyncExecutor
+-keepclassmembers class * extends de.greenrobot.event.util.ThrowableFailureEvent {
+    <init>(Java.lang.Throwable);
+}
+
+-keepclassmembers class ** {
+    public void onEvent*(**);
+}
+
+-keep public class com.google.gson.**
+-keep public class com.google.gson.** {public private protected *;}
+
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep public class com.project.mocha_patient.login.SignResponseData { private *; }
